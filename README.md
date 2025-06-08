@@ -74,7 +74,7 @@ src/
 ## Fonctionnalités
 
 ### Authentification
-- Création de compte (senior, bénévole, famille)
+- Création de compte (senior, Intervenant, famille)
 - Connexion/déconnexion
 - Stockage local des informations utilisateur
 

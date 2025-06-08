@@ -40,7 +40,7 @@ const RegisterForm = () => {
         lastName,
         email,
         password,
-        userType: userType as 'senior' | 'benevole' | 'famille',
+        userType: userType as 'senior' | 'intervenant' | 'famille',
       });
       
       toast({
@@ -75,8 +75,8 @@ const RegisterForm = () => {
             <Label htmlFor="senior">Senior</Label>
           </div>
           <div className="flex items-center space-x-2">
-            <RadioGroupItem value="benevole" id="benevole" />
-            <Label htmlFor="benevole">Bénévole</Label>
+            <RadioGroupItem value="intervenant" id="intervenant" />
+            <Label htmlFor="intervenant">Intervenant</Label>
           </div>
           <div className="flex items-center space-x-2">
             <RadioGroupItem value="famille" id="famille" />

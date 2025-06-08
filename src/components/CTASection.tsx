@@ -11,7 +11,7 @@ const CTASection = () => {
             Rejoignez notre communauté d'entraide
           </h2>
           <p className="text-xl text-white/90 mb-8">
-            Que vous soyez senior, bénévole ou membre d'une famille, inscrivez-vous gratuitement et commencez à utiliser VoisinAge dès aujourd'hui.
+            Que vous soyez senior, Intervenant ou membre d'une famille, inscrivez-vous gratuitement et commencez à utiliser VoisinAge dès aujourd'hui.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/inscription">

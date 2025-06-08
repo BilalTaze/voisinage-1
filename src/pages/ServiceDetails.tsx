@@ -42,7 +42,7 @@ const ServiceDetails = () => {
           });
         }
         
-        // Récupérer les informations du bénévole si assigné
+        // Récupérer les informations du Intervenant si assigné
         if (serviceRequest.volunteerId) {
           const volunteer = userService.getUserById(serviceRequest.volunteerId);
           if (volunteer) {
@@ -194,13 +194,13 @@ const ServiceDetails = () => {
               </Card>
             )}
 
-            {/* Informations du bénévole */}
+            {/* Informations du Intervenant */}
             {volunteerInfo && request.status !== 'open' && (
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center">
                     <User className="h-5 w-5 mr-2" />
-                    Bénévole assigné
+                    Intervenant assigné
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -213,7 +213,7 @@ const ServiceDetails = () => {
             )}
 
             {/* Actions */}
-            {user?.userType === 'benevole' && request.status === 'assigned' && user.id === request.volunteerId && (
+            {user?.userType === 'intervenant' && request.status === 'assigned' && user.id === request.volunteerId && (
               <Card>
                 <CardHeader>
                   <CardTitle>Actions</CardTitle>

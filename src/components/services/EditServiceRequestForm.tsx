@@ -125,7 +125,7 @@ const EditServiceRequestForm = () => {
       <CardHeader>
         <CardTitle>Modifier ma demande</CardTitle>
         <CardDescription>
-          Modifiez les détails de votre demande d'aide. Cette demande ne pourra plus être modifiée une fois qu'un bénévole l'aura prise en charge.
+          Modifiez les détails de votre demande d'aide. Cette demande ne pourra plus être modifiée une fois qu'un Intervenant l'aura prise en charge.
         </CardDescription>
       </CardHeader>
       <CardContent>

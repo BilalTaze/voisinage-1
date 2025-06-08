@@ -98,7 +98,7 @@ const Services = () => {
                   location={request.location}
                   date={new Date(request.date).toLocaleDateString('fr-FR')}
                   status={request.status}
-                  userType={userType as 'senior' | 'benevole' | 'family'}
+                  userType={userType as 'senior' | 'intervenant' | 'family'}
                   onRequestUpdate={fetchRequests}
                 />
               ))}

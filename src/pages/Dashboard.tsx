@@ -27,7 +27,7 @@ const Dashboard = () => {
       if (user.userType === 'senior') {
         // Pour les seniors, montrer leurs propres demandes
         userRequests = serviceRequestService.getUserRequests(user.id);
-      } else if (user.userType === 'benevole') {
+      } else if (user.userType === 'intervenant') {
         // Pour les bénévoles, montrer les demandes auxquelles ils ont répondu et les demandes disponibles
         const assignedRequests = serviceRequestService.getVolunteerRequests(user.id);
         const allRequests = serviceRequestService.getAllRequests();

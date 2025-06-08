@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import MainLayout from "../layout/MainLayout";
 import HowItWorksComponent from "../components/HowItWorks";
@@ -22,15 +21,15 @@ const HowItWorksPage = () => {
   const faqItems = [
     {
       question: "Comment puis-je m'inscrire sur VoisinAge ?",
-      answer: "Pour vous inscrire, cliquez sur le bouton 'Inscription' en haut à droite de la page d'accueil. Vous pouvez vous inscrire en tant que senior, bénévole ou famille. Remplissez ensuite le formulaire d'inscription avec vos informations personnelles."
+      answer: "Pour vous inscrire, cliquez sur le bouton 'Inscription' en haut à droite de la page d'accueil. Vous pouvez vous inscrire en tant que senior, Intervenant ou famille. Remplissez ensuite le formulaire d'inscription avec vos informations personnelles."
     },
     {
       question: "Quels types de services sont disponibles sur VoisinAge ?",
-      answer: "VoisinAge propose plusieurs catégories de services : courses, bricolage, jardinage, accompagnement, aide informatique, et compagnie. Les seniors peuvent demander de l'aide pour ces différentes tâches du quotidien."
+      answer: "VoisinAge propose plusieurs catégories de services : courses, bricolage, jardinage, accompagnement, aide informatique, et compagnie. Les seniors peuvent demander de l'aide pour ces différentes tâches du quotidien. Selon les accords entre utilisateurs, ces services peuvent être gratuits ou rémunérés."
     },
     {
-      question: "Comment choisir un bénévole pour ma demande ?",
-      answer: "Lorsqu'un bénévole propose son aide pour votre demande, vous recevez une notification. Vous pouvez consulter son profil et ses évaluations avant d'accepter sa proposition. Une fois acceptée, vous pouvez communiquer directement avec le bénévole via notre messagerie."
+      question: "Comment choisir un intervenant pour ma demande ?",
+      answer: "Lorsqu'une personne propose son aide pour votre demande, vous recevez une notification. Vous pouvez consulter son profil et ses évaluations avant d'accepter sa proposition. Une fois acceptée, vous pouvez communiquer directement avec l'intervenant via notre messagerie. Selon l'accord, l'aide peut être gratuite ou rémunérée."
     },
     {
       question: "Comment suivre les activités en tant que famille ?",
@@ -38,7 +37,7 @@ const HowItWorksPage = () => {
     },
     {
       question: "VoisinAge est-il gratuit ?",
-      answer: "Oui, l'utilisation de VoisinAge est entièrement gratuite. Notre plateforme vise à faciliter l'entraide de proximité de manière bénévole. Aucun échange d'argent n'est nécessaire entre les utilisateurs."
+      answer: "VoisinAge permet des services gratuits ou rémunérés selon les situations. Certaines aides sont proposées gratuitement, d’autres peuvent être rémunérées selon l’accord entre utilisateurs. Aucun paiement n’est géré par la plateforme."
     },
   ];
 
@@ -51,6 +50,9 @@ const HowItWorksPage = () => {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-10 text-center">En détail pour chaque utilisateur</h2>
+          <p className="text-center text-gray-600 mb-8">
+            VoisinAge facilite l’entraide de proximité: les services peuvent être gratuits ou rémunérés selon les besoins et les accords entre utilisateurs. La plateforme ne gère aucun paiement.
+          </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card>
@@ -61,9 +63,9 @@ const HowItWorksPage = () => {
                 <h3 className="text-xl font-semibold mb-3">Pour les seniors</h3>
                 <ul className="space-y-2 list-disc pl-5 mb-4">
                   <li>Créez un profil personnalisé</li>
-                  <li>Publiez vos demandes d'aide</li>
-                  <li>Choisissez le bénévole qui vous convient</li>
-                  <li>Communiquez directement avec les bénévoles</li>
+                  <li>Publiez vos demandes d'aide (gratuite ou rémunérée)</li>
+                  <li>Choisissez l’intervenant qui vous convient</li>
+                  <li>Communiquez directement avec les intervenants</li>
                   <li>Évaluez les services reçus</li>
                 </ul>
                 <Link to="/inscription">
@@ -79,17 +81,17 @@ const HowItWorksPage = () => {
                 <div className="flex items-center justify-center h-12 w-12 rounded-full bg-voisinage-blue text-white mb-4">
                   <ClipboardCheck className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Pour les bénévoles</h3>
+                <h3 className="text-xl font-semibold mb-3">Pour les intervenants</h3>
                 <ul className="space-y-2 list-disc pl-5 mb-4">
                   <li>Créez votre profil et indiquez vos disponibilités</li>
                   <li>Parcourez les demandes d'aide près de chez vous</li>
-                  <li>Proposez votre aide aux seniors</li>
+                  <li>Proposez votre aide (gratuite ou rémunérée) aux seniors</li>
                   <li>Organisez la prestation via la messagerie</li>
                   <li>Recevez des évaluations pour vos services</li>
                 </ul>
                 <Link to="/inscription">
                   <Button variant="outline" className="w-full border-voisinage-blue text-voisinage-blue">
-                    Je suis bénévole
+                    Je suis Intervenant
                   </Button>
                 </Link>
               </CardContent>
@@ -104,9 +106,9 @@ const HowItWorksPage = () => {
                 <ul className="space-y-2 list-disc pl-5 mb-4">
                   <li>Créez un compte familial</li>
                   <li>Connectez-le au profil de votre proche</li>
-                  <li>Suivez les demandes d'aide et les prestations</li>
+                  <li>Suivez les demandes d'aide et les prestations (gratuites ou rémunérées)</li>
                   <li>Recevez des notifications sur les activités</li>
-                  <li>Communiquez avec les bénévoles si nécessaire</li>
+                  <li>Communiquez avec les intervenants si nécessaire</li>
                 </ul>
                 <Link to="/inscription">
                   <Button variant="outline" className="w-full border-voisinage-blue text-voisinage-blue">

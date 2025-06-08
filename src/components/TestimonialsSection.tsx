@@ -14,9 +14,9 @@ const TestimonialsSection = () => {
       role: "Famille",
     },
     {
-      quote: "Devenir bénévole sur VoisinAge m'a permis de créer des liens précieux avec des seniors de mon quartier tout en me rendant utile.",
+      quote: "Devenir Intervenant sur VoisinAge m'a permis de créer des liens précieux avec des seniors de mon quartier tout en me rendant utile.",
       name: "Julie Leroux",
-      role: "Bénévole, 32 ans",
+      role: "Intervenant, 32 ans",
     },
   ];
 

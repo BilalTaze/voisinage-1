@@ -7,7 +7,7 @@ const HowItWorks = () => {
   const steps = [
     {
       title: "Créez votre profil",
-      description: "Inscrivez-vous en tant que senior, bénévole ou famille et complétez votre profil.",
+      description: "Inscrivez-vous en tant que senior, Intervenant ou famille et complétez votre profil.",
       icon: <UserRound className="h-6 w-6" />,
     },
     {

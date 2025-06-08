@@ -40,7 +40,7 @@ const ServiceHistory = () => {
           });
         }
         
-        // Récupérer les informations du bénévole si assigné
+        // Récupérer les informations du Intervenant si assigné
         if (serviceRequest.volunteerId) {
           const volunteer = userService.getUserById(serviceRequest.volunteerId);
           if (volunteer) {
@@ -112,7 +112,7 @@ const ServiceHistory = () => {
     if (request.status === 'assigned' || request.status === 'completed') {
       steps.push({
         title: "Demande prise en charge",
-        description: volunteerInfo ? `Par ${volunteerInfo.firstName} ${volunteerInfo.lastName}` : "Par un bénévole",
+        description: volunteerInfo ? `Par ${volunteerInfo.firstName} ${volunteerInfo.lastName}` : "Par un Intervenant",
         date: new Date(request.createdAt), // Note: nous n'avons pas de date précise d'assignation
         completed: true,
         icon: UserCheck
@@ -228,10 +228,10 @@ const ServiceHistory = () => {
                     </div>
                   )}
                   
-                  {/* Bénévole */}
+                  {/* Intervenant */}
                   {volunteerInfo && (
                     <div className="space-y-2">
-                      <h4 className="font-medium text-gray-900">Bénévole</h4>
+                      <h4 className="font-medium text-gray-900">Intervenant</h4>
                       <div className="bg-green-50 p-3 rounded-lg">
                         <p className="font-medium">{volunteerInfo.firstName} {volunteerInfo.lastName}</p>
                         <p className="text-sm text-gray-600">{volunteerInfo.email}</p>

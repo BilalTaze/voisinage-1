@@ -31,7 +31,7 @@ const Confidentialite = () => {
             <ul className="list-disc list-inside mt-2 ml-4 text-gray-700">
               <li>Nom et prénom</li>
               <li>Adresse e-mail</li>
-              <li>Type d'utilisateur (senior, bénévole, famille)</li>
+              <li>Type d'utilisateur (senior, Intervenant, famille)</li>
               <li>Localisation (pour les services de proximité)</li>
               <li>Numéro de téléphone (facultatif)</li>
             </ul>

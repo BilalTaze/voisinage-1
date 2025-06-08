@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,7 +16,7 @@ interface ServiceRequestProps {
   location: string;
   date: string;
   status: "open" | "assigned" | "completed";
-  userType: "senior" | "benevole" | "family";
+  userType: "senior" | "intervenant" | "family";
   volunteerId?: string;
   userId?: string;
   onRequestUpdate?: () => void;
@@ -41,7 +40,7 @@ const ServiceRequestCard = ({
   const { user } = useAuth();
   const [volunteerInfo, setVolunteerInfo] = useState<{ firstName: string; lastName: string; email: string } | null>(null);
 
-  // Récupérer les informations du bénévole si la demande est assignée
+  // Récupérer les informations du Intervenant si la demande est assignée
   useEffect(() => {
     if (volunteerId && (userType === 'family' || userType === 'senior') && status === 'assigned') {
       const volunteer = userService.getUserById(volunteerId);
@@ -159,7 +158,7 @@ const ServiceRequestCard = ({
 
   const getActionButton = () => {
     // Pour les bénévoles : bouton "Prendre la demande" si statut open
-    if (userType === "benevole" && status === "open") {
+    if (userType === "intervenant" && status === "open") {
       return (
         <Button 
           className="w-full bg-voisinage-blue hover:bg-voisinage-blue-dark"
@@ -170,7 +169,7 @@ const ServiceRequestCard = ({
       );
     } 
     // Pour les bénévoles : bouton "Marquer comme terminé" si assigné à eux
-    else if (userType === "benevole" && status === "assigned" && volunteerId === user?.id) {
+    else if (userType === "intervenant" && status === "assigned" && volunteerId === user?.id) {
       return (
         <Button 
           className="w-full bg-green-500 hover:bg-green-600"
@@ -244,12 +243,12 @@ const ServiceRequestCard = ({
             <span className="text-sm">{date}</span>
           </div>
           
-          {/* Affichage des informations du bénévole pour les familles et seniors */}
+          {/* Affichage des informations du Intervenant pour les familles et seniors */}
           {volunteerInfo && (userType === 'family' || userType === 'senior') && status === 'assigned' && (
             <div className="mt-4 p-3 bg-blue-50 rounded-lg">
               <div className="flex items-center text-blue-700 mb-2">
                 <User className="h-4 w-4 mr-2" />
-                <span className="text-sm font-medium">Bénévole assigné</span>
+                <span className="text-sm font-medium">Intervenant assigné</span>
               </div>
               <div className="text-sm text-blue-600">
                 <p><strong>{volunteerInfo.firstName} {volunteerInfo.lastName}</strong></p>

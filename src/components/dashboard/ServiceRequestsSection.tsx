@@ -25,7 +25,7 @@ const ServiceRequestsSection = ({
   const getDescriptionText = () => {
     if (userType === 'senior') {
       return "Gérez vos demandes d'aide et suivez leur progression";
-    } else if (userType === 'benevole') {
+    } else if (userType === 'intervenant') {
       return "Consultez les demandes d'aide disponibles et celles que vous avez acceptées";
     } else {
       return "Suivez les demandes d'aide de vos proches";
@@ -66,7 +66,7 @@ const ServiceRequestsSection = ({
                     location={request.location}
                     date={new Date(request.date).toLocaleDateString('fr-FR')}
                     status={request.status}
-                    userType={userType as 'senior' | 'benevole' | 'family'}
+                    userType={userType as 'senior' | 'intervenant' | 'family'}
                     volunteerId={request.volunteerId}
                     userId={request.userId}
                     onRequestUpdate={onRequestUpdate}
@@ -86,7 +86,7 @@ const ServiceRequestsSection = ({
                   </Link>
                 )}
                 
-                {userType === 'benevole' && (
+                {userType === 'intervenant' && (
                   <Link to="/services">
                     <Button className="bg-voisinage-blue hover:bg-voisinage-blue-dark">
                       Parcourir les demandes
@@ -110,7 +110,7 @@ const ServiceRequestsSection = ({
                     location={request.location}
                     date={new Date(request.date).toLocaleDateString('fr-FR')}
                     status={request.status}
-                    userType={userType as 'senior' | 'benevole' | 'family'}
+                    userType={userType as 'senior' | 'intervenant' | 'family'}
                     volunteerId={request.volunteerId}
                     userId={request.userId}
                     onRequestUpdate={onRequestUpdate}

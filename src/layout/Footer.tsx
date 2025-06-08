@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="text-2xl font-bold text-voisinage-blue">Voisin<span className="text-voisinage-orange">Age</span></span>
             </Link>
             <p className="text-gray-600 max-w-md">
-              La plateforme qui facilite l'entraide de proximité entre seniors, bénévoles et familles.
+              La plateforme qui facilite l'entraide de proximité entre seniors, volontaires et familles.
             </p>
           </div>
           

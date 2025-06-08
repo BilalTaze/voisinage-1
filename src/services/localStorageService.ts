@@ -8,7 +8,7 @@ export interface User {
   lastName: string;
   email: string;
   password: string; // En production, il faudrait hacher les mots de passe
-  userType: 'senior' | 'benevole' | 'famille';
+  userType: 'senior' | 'intervenant' | 'famille';
   createdAt: string;
 }
 
@@ -21,7 +21,7 @@ export interface ServiceRequest {
   date: string;
   status: 'open' | 'assigned' | 'completed';
   userId: string; // ID de l'utilisateur qui a créé la demande
-  volunteerId?: string; // ID du bénévole assigné (optionnel)
+  volunteerId?: string; // ID du Intervenant assigné (optionnel)
   createdAt: string;
 }
 
@@ -173,13 +173,13 @@ export const serviceRequestService = {
     return requests.filter(req => req.userId === userId);
   },
   
-  // Récupérer les demandes assignées à un bénévole
+  // Récupérer les demandes assignées à un Intervenant
   getVolunteerRequests: (volunteerId: string): ServiceRequest[] => {
     const requests = serviceRequestService.getAllRequests();
     return requests.filter(req => req.volunteerId === volunteerId);
   },
   
-  // Assigner un bénévole à une demande
+  // Assigner un Intervenant à une demande
   assignVolunteer: (requestId: string, volunteerId: string): ServiceRequest => {
     const requests = serviceRequestService.getAllRequests();
     const index = requests.findIndex(req => req.id === requestId);

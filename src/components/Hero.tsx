@@ -9,12 +9,12 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Entraide de proximité pour
+              Entraide de proximité entre
               <span className="text-voisinage-blue"> seniors</span> et
-              <span className="text-voisinage-orange"> bénévoles</span>
+              <span className="text-voisinage-orange"> intervenants</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              La plateforme qui facilite l'entraide entre seniors, bénévoles et familles dans votre quartier.
+              La plateforme qui facilite l'entraide entre seniors, volontaires et familles dans votre quartier.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/inscription">
